@@ -8,18 +8,18 @@ int main() {
     
     int ans=0;
     
-    for(long long int i=2; i<sqrt(n); i++)
+    for(long long int i=2; i*i<=n; i++)
     {
-        while(n%i==0)
+        while(n%i==0 && n!=i)
         {
-            ans = i;
+            // ans = i;
             n = n/i;
         }
     }
     
-    if(n>1)
+    // if(n>1)
         cout << "num: " << n;
-    else
-        cout << "num: " << ans;
+    // else
+    //     cout << "num: " << ans;
     return 0;
 }
